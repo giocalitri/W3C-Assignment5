@@ -1,0 +1,3 @@
+1- Hangman: based on http://www.huntingground.freeserve.co.uk/main/mainfram.htm?../games/hangman/hangman1.htm
+2- Web application, no widget
+3- Use different images,
