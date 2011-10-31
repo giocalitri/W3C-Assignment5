@@ -36,6 +36,10 @@ div {
 #hangman_img {
 	min-height: 160px;
 	min-width: 85px;
+	margin-top: 1%;
+}
+#cur_img {
+	min-height: 150px;
 }
 
 #words {
@@ -84,7 +88,7 @@ ul.letters {
 	margin-left: 0.5em;
 }
 ul.letters li{
-	padding: 0.7em;
+	padding: 0.4em;
 	border:2px solid black;
 	background-color:#F1F1BA;
 	width:1.5em;
@@ -103,6 +107,10 @@ ul.letters li.levelset {
 	background-color:#D1D154;
 }
 
+ul.letters li.hideletter {
+	display:none;
+}
+
 #help ul {
 	margin-left:5%;
 	list-style-type: disc;
@@ -112,7 +120,9 @@ ul.letters li.levelset {
 	width:auto;
 }
 #setup_scores ul.letters li.newgame {
-	float: none;
+	clear: both;
+	padding-left:2em;
+	padding-right:2em;
 }
 
 ul.scores {
@@ -120,6 +130,9 @@ ul.scores {
 	font-weight:bold;
 }
 
+span.endgame {
+	font-weight:bold;
+}
 
 
 
