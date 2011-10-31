@@ -23,11 +23,12 @@ ul.letters{margin-left:.5em}
 ul.letters li{border:2px solid #000;background-color:#F1F1BA;width:1.5em;text-align:center;border-radius:.5em;box-shadow:rgba(0,0,0,0.2) .5em .5em .3em;float:left;margin-right:1em;margin-top:.5em;margin-bottom:.5em;font-weight:700;cursor:pointer;padding:.4em}
 ul.letters li.levelset{background-color:#D1D154}
 ul.letters li.hideletter{background-color:grey;cursor:auto}
+.offline ul.letters li{width:auto;float:none;}
 #help ul{margin-left:5%;list-style-type:disc}
 #setup_scores ul.letters li{width:auto}
 #setup_scores ul.letters li.newgame{float:none;clear:both}
 dl.scores{font-weight:700;clear:both;margin-left:1em}
 dl.scores dd{margin-left:1em}
 span.endgame{font-weight:700}
-
+.offline{text-align:center}
 
