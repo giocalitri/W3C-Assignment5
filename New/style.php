@@ -36,7 +36,7 @@ span.endgame{font-weight:700}
 .pos_twelve {background-position:-75px 0}
 .pos_eleven {background-position:-150px 0}
 .pos_ten {background-position:-225px 0}
-.pos_nine {background-position:-3000px 0}
+.pos_nine {background-position:-300px 0}
 .pos_eight {background-position:-375px 0}
 .pos_seven {background-position:-450px 0}
 .pos_six {background-position:-525px 0}
