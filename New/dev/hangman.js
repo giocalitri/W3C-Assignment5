@@ -13,12 +13,12 @@ function getWord() {
 
 
 //I check if there is JSON otherwise I load it
-if (typeof JSON == 'undefined')
+if (true)//(typeof JSON == 'undefined')
 {
 	var headID = document.getElementsByTagName("head")[0];
 	var newScript = document.createElement('script');
 	newScript.type = 'text/javascript';
-	newScript.src='json2.js';
+	newScript.src='json2_js.php';
 	headID.appendChild(newScript);
 }
 

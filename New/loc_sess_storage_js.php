@@ -1,3 +1,7 @@
+<?php 
+header("Content-Type: text/javascript; charset=utf-8");
+header("Cache-Control: max-age=31536000, public");
+?>
 (typeof window.localStorage=="undefined"||typeof window.sessionStorage=="undefined")&&function(){var c=function(e){function c(a,e,b){var d;b?(d=new Date,d.setTime(d.getTime()+b*864E5),b="; expires="+d.toGMTString()):b="";document.cookie=a+"="+e+b+"; path=/"}function d(a){a=JSON.stringify(a);e=="session"?window.name=a:c("localStorage",a,365)}var f=function(){var a;if(e=="session")a=window.name;else a:{a=document.cookie.split(";");var d,b;for(d=0;d<a.length;d++){for(b=a[d];b.charAt(0)==" ";)b=b.substring(1,
 b.length);if(b.indexOf("localStorage=")==0){a=b.substring(13,b.length);break a}}a=null}return a?JSON.parse(a):{}}();return{length:0,clear:function(){f={};this.length=0;e=="session"?window.name="":c("localStorage","",365)},getItem:function(a){return f[a]===void 0?null:f[a]},key:function(a){var d=0,b;for(b in f)if(d==a)return b;else d++;return null},removeItem:function(a){delete f[a];this.length--;d(f)},setItem:function(a,e){f[a]=e+"";this.length++;d(f)}}};if(typeof window.localStorage=="undefined")window.localStorage=
 new c("local");if(typeof window.sessionStorage=="undefined")window.sessionStorage=new c("session")}();

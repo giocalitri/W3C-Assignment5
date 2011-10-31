@@ -14,7 +14,7 @@ require_once 'settings.php';
 	<link rel="stylesheet" type="text/css" href="style.php"/>
 	<link rel="stylesheet" type="text/css" href="style_desktop.php"/>
 	<link rel="canonical" href="http://<?php echo $_SERVER['SERVER_NAME'].$path_parts['dirname'] ?>/hangman.php"/>
-	<script type="text/javascript" src="loc_sess_storage.js"></script>
+	<script type="text/javascript" src="loc_sess_storage_js.php"></script>
 </head>
 <body>
 <h1>Hangman</h1>
@@ -77,6 +77,6 @@ require_once 'settings.php';
 		</ul>
 	</div>
 </div>
-<script type="text/javascript" src="hangman.js"></script>
+<script type="text/javascript" src="hangman_js.php"></script>
 </body>
 </html>
