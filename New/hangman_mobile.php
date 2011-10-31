@@ -9,12 +9,13 @@ xml:lang="en"><head><meta charset="UTF-8" /><meta
 name="viewport" content="width=device-width,initial-scale=1.0" /><title>Hangman</title><link rel="stylesheet" 
 type="text/css" href="style.php"/><link rel="canonical" href="http://<?php
 echo $_SERVER['SERVER_NAME'].$path_parts['dirname'] ?>/hangman.php"/><script type="text/javascript"
-src="loc_sess_storage_js.php"></script></head><body><h1>Hangman</h1><div id="container"><div id="game"><div id="hangman_img"><div
-id="cur_img"></div><div id="rem_chances"></div></div><div id="setup_scores"><ul class="letters"><li
+src="loc_sess_storage_js.php"></script></head><body><h1>Hangman</h1><div id="container">
+<div id="game"><div id="setup_scores"><ul class="letters"><li
 class="newgame" onclick="start_new_game()">New game</li><li id="level_easy" onclick="change_level('easy')">Easy</li><li
 id="level_medium" onclick="change_level('medium')">Medium</li><li id="level_hard" onclick="change_level('hard')">Hard</li></ul><dl
 class="scores"><dt>Games Score:</dt><dd>Played: <span id="game_played">0</span></dd><dd>Won:
-<span id="game_won">0</span></dd></dl></div><div id="words"><span id="guessword">If you see this text for more than 10
+<span id="game_won">0</span></dd></dl></div><div id="hangman_img"><div
+id="cur_img"></div><div id="rem_chances"></div></div><div id="words"><span id="guessword">If you see this text for more than 10
 seconds, your browser doesn't support javascript and you cannot play :-( <br/>Please visit this page with a browser
 that supports javascript.</span></div><div id="keyboard"><ul class="letters"><li
 id="let_A" onclick="guess_letter('A')">A</li><li id="let_B" onclick="guess_letter('B')">B</li><li
