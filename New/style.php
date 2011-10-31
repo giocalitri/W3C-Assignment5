@@ -2,7 +2,7 @@
 header("Content-Type: text/css; charset=utf-8");
 header("Cache-Control: max-age=31536000, public");
 ?>
-@charset UTF-8;
+@CHARSET "UTF-8";
 html,body,#container{background-color:#F5F5DC;text-align:left;width:100%;margin:0;padding:0}
 h1,h2{font-weight:700;margin:0;padding:0}
 h1{font-size:1.5em;text-align:center}
