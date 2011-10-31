@@ -1,3 +1,6 @@
 1- Hangman: based on http://www.huntingground.freeserve.co.uk/main/mainfram.htm?../games/hangman/hangman1.htm
 2- Web application, no widget
 3- Use different images,
+4- if local and session storage are not available, the game works only for the current session, otherwise it remembers everything
+5- if native JSON is not available, I load a specific class
+6- I decided to use jQuery because of the heavy use of javascript and CSS change made by javascript 
