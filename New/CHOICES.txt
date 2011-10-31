@@ -1,7 +1,8 @@
-1- Hangman: images and idea based on http://www.huntingground.freeserve.co.uk/main/mainfram.htm?../games/hangman/hangman1.htm
-   All the code has been rewritten
-2- Web application, no widget
-3- Use different images,
-4- if local and session storage are not available, the game remeber the statistics only for the current session,  
-   otherwise it remembers everything
-5- if native JSON is not available, I load a specific class
+Some notes:
+I decided to develop the "Hangman game" as web application.
+I took the idea and the images from this website: http://bit.ly/rKLijb
+but I rewrote all the code (html, css, javascript)
+I made an important decision: not all the browsers are supported. If there is no support for javascript nothing works (but the website will tell the user about this problem). If there is no support for spires, the game works but there is no image: the alternate was having 13 different images of 4KB each (now I have a single one of 12KB).
+If the browser doesn't support local storage, the game will remember the scores only for the duration of the session.
+If the browser doesn't support JSON natively, I actually fetch the class on the fly instead of loading it in any case.
+I made some tests with the application cache and works: I'm able to play offline in airplane mode on my iPhone and to load the page after closing the browser.
