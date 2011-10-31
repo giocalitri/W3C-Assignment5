@@ -1,19 +1,8 @@
 CACHE MANIFEST
-# v2 - desktop - 2011-10-31
+# v3 - desktop - 2011-10-31
 
 CACHE:
-img/gallow1.gif
-img/gallow2.gif
-img/gallow3.gif
-img/gallow4.gif
-img/gallow5.gif
-img/gallows.gif
-img/man1_5.gif
-img/man1_4.gif
-img/man1_3.gif
-img/man1_2.gif
-img/man1_1.gif
-img/man1_0.gif
+img/hangman.gif
 hangman_desktop.php
 hangman_mobile.php
 hangman_js.php
