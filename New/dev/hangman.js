@@ -13,7 +13,7 @@ function getWord() {
 
 
 //I check if there is JSON otherwise I load it
-if (true)//(typeof JSON == 'undefined')
+if (typeof JSON == 'undefined')
 {
 	var headID = document.getElementsByTagName("head")[0];
 	var newScript = document.createElement('script');

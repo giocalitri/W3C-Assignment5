@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1 - desktop - 2011-10-31
+# v2 - desktop - 2011-10-31
 
 CACHE:
 img/gallow1.gif
@@ -23,7 +23,7 @@ style_desktop.php
 style.php
 
 FALLBACK:
-/hangman.php 
+hangman.php offline.php
 
 NETWORK:
 *
