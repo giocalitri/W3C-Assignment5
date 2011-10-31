@@ -33,7 +33,7 @@ id="let_Y" onclick="guess_letter('Y')">Y</li><li id="let_Z" onclick="guess_lette
 to play</h2><ul><li>If you want select the difficulty level. This sets the number of wrong attempts before hanging
 to 3, 6, or 12</li><li>Press New Game</li><li>The game begins when you select your first character.</li><li>You cannot
 change the difficulty level once the game has started until the &quot;New Game&quot; button is
-pressed</li></ul></div><div id="footer"><ul><li><a href="<?php echo $path_parts['dirname']?>/hangman.php?vpa=d">View 
+pressed</li><li>NOTE: You can play this game offline!</li></ul></div><div id="footer"><ul><li><a href="<?php echo $path_parts['dirname']?>/hangman.php?vpa=d">View 
 desktop version of this website</a></li><li><a
 href="http://www.huntingground.freeserve.co.uk/main/mainfram.htm?../games/hangman/hangman1.htm">Visit the
 website that inspired this page</a></li></ul></div></div><script type="text/javascript" src="hangman_js.php"></script></body></html>
