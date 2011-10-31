@@ -31,10 +31,11 @@ require_once 'settings.php';
 				<li id="level_medium" onclick="change_level('medium');">Medium</li>
 				<li id="level_hard" onclick="change_level('hard');">Hard</li>
 			</ul>
-			<ul class="scores">
-				<li>Games Played: <span id="game_played">0</span></li>
-				<li>Games Won: <span id="game_won">0</span></li>
-			</ul>
+			<dl class="scores">
+				<dt>Games Score:</dt>
+				<dd>Played: <span id="game_played">0</span></dd>
+				<dd>Won: <span id="game_won">0</span></dd>
+			</dl>
 		</div>
 		<div id="words">
 			<span id="guessword">
