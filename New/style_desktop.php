@@ -1,6 +1,6 @@
 <?php 
 header("Content-Type: text/css; charset=utf-8");
-#header("Cache-Control: max-age=31536000, public");
+header("Cache-Control: max-age=31536000, public");
 ?>
 @charset UTF-8;
 h1{font-size:2em;margin-top:1%}
