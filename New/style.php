@@ -9,7 +9,7 @@ h1{font-size:1.5em;text-align:center}
 h2{font-size:1.3em}
 div{clear:both}
 #game{border:1px solid #000}
-#hangman_img{min-height:160px;min-width:85px;margin-top:1%;clear:right}
+#hangman_img{min-height:160px;min-width:85px;margin-top:1%;clear:right; width:30%;}
 #cur_img{min-height:150px}
 #words{border-bottom:1px solid #000;font-size:1.2em;padding:.5em}
 #footer{margin:1%;padding:1%}
@@ -31,4 +31,17 @@ dl.scores{font-weight:700;clear:both;margin-left:.5em}
 dl.scores dd{margin-left:.5em}
 span.endgame{font-weight:700}
 .offline{text-align:center}
-
+.sprites {display:inline-block;background:url('img/hangman.gif') no-repeat left center;background-position:0 0;width:75px;height:150px;}
+.pos_thirteen {background-position:0 0}
+.pos_twelve {background-position:-75px 0}
+.pos_eleven {background-position:-150px 0}
+.pos_ten {background-position:-225px 0}
+.pos_nine {background-position:-3000px 0}
+.pos_eight {background-position:-375px 0}
+.pos_seven {background-position:-450px 0}
+.pos_six {background-position:-525px 0}
+.pos_five {background-position:-600px 0}
+.pos_four {background-position:-675px 0}
+.pos_three {background-position:-750px 0}
+.pos_two {background-position:-825px 0}
+.pos_one {background-position:-900px 0}

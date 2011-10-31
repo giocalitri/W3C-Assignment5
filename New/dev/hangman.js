@@ -268,9 +268,9 @@ function is_alredy_guessed_letter(letter, hangman_var)
 function show_img(hangman_var)
 {
 	var images_per_level = new Object;
-	images_per_level['hard'] = new Array('gallows.gif', 'man1_2.gif', 'man1_1.gif','man1_0.gif');
-	images_per_level['medium'] = new Array('gallows.gif', 'man1_5.gif', 'man1_4.gif', 'man1_3.gif', 'man1_2.gif', 'man1_1.gif','man1_0.gif');
-	images_per_level['easy'] = new Array('', 'gallow1.gif', 'gallow2.gif', 'gallow3.gif', 'gallow4.gif', 'gallow5.gif', 'gallows.gif', 'man1_5.gif', 'man1_4.gif', 'man1_3.gif', 'man1_2.gif', 'man1_1.gif','man1_0.gif');
+	images_per_level['hard'] = new Array('pos_seven', 'pos_three', 'pos_two','pos_one');
+	images_per_level['medium'] = new Array('pos_seven', 'pos_six', 'pos_five', 'pos_four', 'pos_three', 'pos_two','pos_one');
+	images_per_level['easy'] = new Array('pos_thirteen', 'pos_twelve', 'pos_eleven', 'pos_ten', 'pos_nine', 'pos_eight', 'pos_seven', 'pos_six', 'pos_five', 'pos_four', 'pos_three', 'pos_two','pos_one');
 	
 	var level = hangman_var['level'];
 	var rem_chances = hangman_var['curgame']['rem_chances'];
@@ -296,13 +296,8 @@ function show_img(hangman_var)
 	document.getElementById("cur_img").innerHTML = '';
 	if (img_to_show != '')
 	{
-		var oImg=document.createElement("img");
-		oImg.setAttribute('src', 'img/'+img_to_show);
-		oImg.setAttribute('alt', ('Image for remaining chances: '+rem_chances));
-		oImg.setAttribute('height', '150');
-		oImg.setAttribute('width', '75');
-		var imgID = document.getElementById("cur_img");
-		imgID.appendChild(oImg);
+		var html_to_show = '<span class="sprites '+img_to_show+'"></span>';
+		document.getElementById("cur_img").innerHTML = html_to_show;
 	}
 }
 
