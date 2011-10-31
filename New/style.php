@@ -108,7 +108,8 @@ ul.letters li.levelset {
 }
 
 ul.letters li.hideletter {
-	display:none;
+	background-color:grey;
+	cursor:auto;
 }
 
 #help ul {
@@ -120,9 +121,9 @@ ul.letters li.hideletter {
 	width:auto;
 }
 #setup_scores ul.letters li.newgame {
+	float:none;
 	clear: both;
-	padding-left:2em;
-	padding-right:2em;
+	width: 7em;
 }
 
 ul.scores {

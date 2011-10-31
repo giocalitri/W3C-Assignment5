@@ -236,7 +236,7 @@ function hide_keyboard_letters(hangman_var)
 	var let_guess = hangman_var['curgame']['letter_guessed'];
 	for (lett in let_guess)
 	{
-		document.getElementById("let_"+lett).className += " hideletter";
+		document.getElementById("let_"+lett).className = "hideletter";
 	}
 }
 //function that shows all the letters in the keyboard 
@@ -250,6 +250,18 @@ function show_keyboard_letters()
 			   document.getElementById("let_"+lett).className.replace
 			      ( /(?:^|\s)hideletter(?!\S)/ , '' );
 	}
+}
+
+//function that checks if a letter has been already used
+function is_alredy_guessed_letter(letter, hangman_var)
+{
+	var let_guess = hangman_var['curgame']['letter_guessed'];
+	for (var guessed in let_guess)
+	{
+		if (guessed == letter)
+			return true;
+	}
+	return false;	
 }
 
 //function that shos the hangman image given the current guesses remaining and the difficulty level
@@ -286,7 +298,7 @@ function show_img(hangman_var)
 	{
 		var oImg=document.createElement("img");
 		oImg.setAttribute('src', 'img/'+img_to_show);
-		oImg.setAttribute('alt', ('Remaining chances: '+rem_chances));
+		oImg.setAttribute('alt', ('Image for remaining chances: '+rem_chances));
 		oImg.setAttribute('height', '150');
 		oImg.setAttribute('width', '75');
 		var imgID = document.getElementById("cur_img");
@@ -345,47 +357,50 @@ function start_new_game()
 //function that guesses a letter
 function guess_letter(lett)
 {
-	if (HANGMAN['curgame']['rem_chances'] > 0)
+	if (! is_alredy_guessed_letter(lett, HANGMAN))
 	{
-		//I update the status of the game if necessary
-		if (!HANGMAN['curgame']['game_started'])
-			HANGMAN['curgame']['game_started'] = true;
-		
-		//In any case I add the leter to the global variable
-		HANGMAN['curgame']['letter_guessed'][lett] = true;
-		
-		//I get the word to find
-		var word = HANGMAN['curgame']['word'];
-		//I check if there are some instances of the current letter in the word
-		var positions = letter_in_word(lett, word);
-		//If I have at least one position, then I found a letter in the word 
-		//and I have to check if all the word has been revealed
-		if (positions.length >0)
+		if (HANGMAN['curgame']['rem_chances'] > 0)
 		{
-			//check if all the word has been revealed
-			if (is_word_complete(HANGMAN))
+			//I update the status of the game if necessary
+			if (!HANGMAN['curgame']['game_started'])
+				HANGMAN['curgame']['game_started'] = true;
+			
+			//In any case I add the leter to the global variable
+			HANGMAN['curgame']['letter_guessed'][lett] = true;
+			
+			//I get the word to find
+			var word = HANGMAN['curgame']['word'];
+			//I check if there are some instances of the current letter in the word
+			var positions = letter_in_word(lett, word);
+			//If I have at least one position, then I found a letter in the word 
+			//and I have to check if all the word has been revealed
+			if (positions.length >0)
 			{
-				//I update the stats
-				HANGMAN['played'] = HANGMAN['played'] + 1;
-				HANGMAN['won'] = HANGMAN['won'] + 1;
-				HANGMAN['curgame']['game_status'] = 'won';
+				//check if all the word has been revealed
+				if (is_word_complete(HANGMAN))
+				{
+					//I update the stats
+					HANGMAN['played'] = HANGMAN['played'] + 1;
+					HANGMAN['won'] = HANGMAN['won'] + 1;
+					HANGMAN['curgame']['game_status'] = 'won';
+				}
 			}
-		}
-		//Otherwise I have to reduce the future changes and check if this was the last one!
-		else
-		{
-			HANGMAN['curgame']['rem_chances'] = HANGMAN['curgame']['rem_chances'] -1;
-			if (HANGMAN['curgame']['rem_chances'] == 0)
+			//Otherwise I have to reduce the future changes and check if this was the last one!
+			else
 			{
-				//I update the stats
-				HANGMAN['played'] += 1;
-				HANGMAN['curgame']['game_status'] = 'lost';
+				HANGMAN['curgame']['rem_chances'] = HANGMAN['curgame']['rem_chances'] -1;
+				if (HANGMAN['curgame']['rem_chances'] == 0)
+				{
+					//I update the stats
+					HANGMAN['played'] += 1;
+					HANGMAN['curgame']['game_status'] = 'lost';
+				}
 			}
+			//I save the new variable in the localStorage
+			save_to_localstorage('HANGMAN', HANGMAN);
+			//and I show the current situation
+			show_cur_game(HANGMAN);
 		}
-		//I save the new variable in the localStorage
-		save_to_localstorage('HANGMAN', HANGMAN);
-		//and I show the current situation
-		show_cur_game(HANGMAN);
 	}
 }
 

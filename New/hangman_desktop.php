@@ -26,10 +26,10 @@ require_once 'settings.php';
 		</div>
 		<div id="setup_scores">
 			<ul class="letters">
+				<li class="newgame" onclick="start_new_game();">New game</li>
 				<li id="level_easy" onclick="change_level('easy');">Easy</li>
 				<li id="level_medium" onclick="change_level('medium');">Medium</li>
 				<li id="level_hard" onclick="change_level('hard');">Hard</li>
-				<li class="newgame" onclick="start_new_game();">New game</li>
 			</ul>
 			<ul class="scores">
 				<li>Games Played: <span id="game_played">0</span></li>
@@ -77,7 +77,6 @@ require_once 'settings.php';
 		</ul>
 	</div>
 </div>
-<!-- <script type="text/javascript" src="jquery-1.6.4.min.js"></script> -->
 <script type="text/javascript" src="hangman.js"></script>
 </body>
 </html>
